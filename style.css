@@ -1,0 +1,21 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #fdfdfd;
+}
+
+.book {
+    background-color: #f0f8ff;
+    padding: 10px;
+    margin-bottom: 20px; 
+}
+
+form {
+    margin-top: 20px;
+}
+
+#reviews div {
+    border-top: 1px solid #ccc;
+    margin-top: 10px;
+    padding-top: 10px;
+}
