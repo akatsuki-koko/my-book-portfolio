@@ -51,3 +51,22 @@ app.post('/reviews', async (req, res) => {
 
 console.log("接続文字列：", mongoUri);
 startServer();
+
+// server.js の該当箇所に追記
+// ─────────────────────────────────────
+app.get('/reviews', async (req, res) => {
+  try {
+    const db = client.db('bookSite');
+    const collection = db.collection('reviews');
+    // 作成日時の降順で取得（最新が先頭）
+    const reviews = await collection
+      .find({})
+      .sort({ createdAt: -1 })
+      .toArray();
+    res.json(reviews);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'レビュー取得中にエラーが発生しました' });
+  }
+});
+// ─────────────────────────────────────
