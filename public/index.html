@@ -16,10 +16,28 @@
     </div>
 
     <h2>レビューを投稿</h2>
+
     <form id="review-form">
         <label for="book-title">本のタイトル</label>
         <input type="text" id="book-title" required><br>
-
+        <label for="author">筆者</label><br>
+        <input type="text" id ="author" required><br>
+        <label for="category">分類</label><br>
+        <select id="category" required>
+            <option value="">--選択してください--</option>
+            <option value="恋愛">恋愛</option>
+            <option value="青春">青春</option>
+            <option value="冒険">冒険</option>
+            <option value="SF">SF</option>
+            <option value="ミステリー・サスペンス">ミステリー・サスペンス</option>
+            <option value="ホラー">ホラー</option>
+            <option value="ファンタジー">ファンタジー</option>
+            <option value="歴史・時代物">歴史・時代物</option>
+            <option value="ノンフィクション・伝記">ノンフィクション・伝記</option>
+            <option value="文芸・純文学">文芸・純文学</option>
+            <option value="児童・YA">児童・YA</option>
+            <option value="実用・エッセイ">実用・エッセイ</option>
+        </select><br>
         <label for="review">レビュー</label><br>
         <textarea name="review" id="review" rows="4" cols="50" required></textarea><br>
         <label for="stars">評価（☆）</label>
