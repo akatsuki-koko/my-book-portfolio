@@ -53,9 +53,8 @@ form {
 
   /* 星評価エリア */
 .star-rating {
-    display: flex;
-    flex-direction: row-reverse; /* 右から1〜5 */
-    justify-content: flex-end;
+    display: inline-flex;
+    direction: rtl;
   }
   .star-rating input {
     display: none; /* ラジオボタン自体は非表示 */
@@ -64,6 +63,7 @@ form {
     font-size: 2rem;
     color: #ccc;
     cursor: pointer;
+    user-select: none;
     transition: color 0.2s;
   }
   /* ホバー時に手前の星まで色づけ */
@@ -72,8 +72,8 @@ form {
     color: gold;
   }
   /* チェック済み（選択済み）の星とその前の星を色づけ */
-  .star-rating input:checked ~ label,
-  .star-rating input:checked ~ label ~ label {
+  .star-rating input:checked + label,
+  .star-rating input:checked + label ~ label {
     color: gold;
   }  
   
