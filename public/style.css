@@ -54,7 +54,8 @@ form {
   /* 星評価エリア */
 .star-rating {
     display: inline-flex;
-    direction: rtl;
+    flex-direction: row-reverse;
+    gap: 0.25rem
   }
   .star-rating input {
     display: none; /* ラジオボタン自体は非表示 */
@@ -72,8 +73,7 @@ form {
     color: gold;
   }
   /* チェック済み（選択済み）の星とその前の星を色づけ */
-  .star-rating input:checked + label,
-  .star-rating input:checked + label ~ label {
+  .star-rating input:checked ~ label {
     color: gold;
   }  
   
