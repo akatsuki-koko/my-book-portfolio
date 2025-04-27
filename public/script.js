@@ -7,7 +7,7 @@ document.getElementById(`review-form`).addEventListener(`submit`,async function(
     const author = document.getElementById(`author`).value;
     const content = document.getElementById(`review`).value;
     const stars = Number(document.querySelector(`input[name="stars"]:checked`)?.value) || 0;
-    const dategory = document.getuElementById(`category`).value;
+    const category = document.getElementById(`category`).value;
 
     if (!category) return alert(`分類を選択してください`);
 

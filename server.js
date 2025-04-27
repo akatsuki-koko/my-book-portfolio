@@ -29,7 +29,7 @@ async function startServer() {
 
 // POSTリクエストの処理
 app.post('/reviews', async (req, res) => {
-  const { bookTitle, reviewText, stars } = req.body;
+  const { bookTitle, author, reviewText, stars, category} = req.body;
 
   try {
     const db = client.db('bookSite');
@@ -37,8 +37,10 @@ app.post('/reviews', async (req, res) => {
 
     const result = await collection.insertOne({
       bookTitle,
+      author,
       reviewText,
       stars,
+      category,
       createdAt: new Date()
     });
 
