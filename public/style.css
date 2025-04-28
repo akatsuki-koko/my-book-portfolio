@@ -52,15 +52,15 @@ form {
   }
 
   /* 星評価エリア */
-.star-rating {
+  #review-form .star-rating {
     display: inline-flex;
     flex-direction: row-reverse;
     gap: 0.25rem
   }
-  .star-rating input {
+  #review-form .star-rating input {
     display: none; /* ラジオボタン自体は非表示 */
   }
-  .star-rating label {
+  #review-form .star-rating label {
     font-size: 2rem;
     color: #ccc;
     cursor: pointer;
@@ -68,12 +68,13 @@ form {
     transition: color 0.2s;
   }
   /* ホバー時に手前の星まで色づけ */
-  .star-rating label:hover,
-  .star-rating label:hover ~ label {
+  #review-form .star-rating label:hover,
+  #review-form .star-rating label:hover ~ label {
     color: gold;
   }
   /* チェック済み（選択済み）の星とその前の星を色づけ */
-  .star-rating input:checked ~ label {
+  #review-form .star-rating input:checked,
+  #review-form .star-rating input:checked ~ label {
     color: gold;
   }  
   
